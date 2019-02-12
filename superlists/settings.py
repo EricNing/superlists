@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'q%nk@yk7#38w$yab*gu0afl_5^3ca2k29lajcx^lwsw&*md_%s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = True
-DEBUG = False
-TEMPLATE_DEBUG = DEBUG
-ALLOWED_HOSTS = ['superlists-staging.eu','localhost',]
+DEBUG = True
+#DEBUG = False
+#TEMPLATE_DEBUG = DEBUG
+ALLOWED_HOSTS = ['superlists-staging.eu','127.0.0.1',]
 
 
 # Application definition
@@ -87,8 +87,8 @@ DATABASES = {
         'NAME': 'book',  # 你要存储数据的库名，事先要创建之
         'USER': 'book',  # 数据库用户名
         'PASSWORD': 'book',  # 密码
-        'HOST': '10.1.23.167',  # 主机
-        'PORT': '3306',  # 数据库使用的端口
+        'HOST': '127.0.0.1',  # 主机
+        'PORT': '13306',  # 数据库使用的端口
 	'OPTIONS':{'isolation_level':None}
     }
 }
