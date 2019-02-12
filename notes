@@ -1,0 +1,5 @@
+https://github.com/twbs/bootstrap/releases
+
+html模板继承
+
+D:\Python27\python.exe manage.py collectstatic --noinput
