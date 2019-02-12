@@ -4,6 +4,7 @@ from lists.models import Item, List
 from django.db import connection
 from django.core.exceptions import ValidationError
 # Create your views here.
+from lists.forms import ItemForm
 
 
 def get_data_from_ora():
@@ -58,7 +59,7 @@ def base(request):
 
 def home_page(request):
     # 默认去所有APP下的templates目录下查找模板
-    return render(request, 'lists/home.html')
+    return render(request, 'lists/home.html', {'form': ItemForm()})
 
 def new_list(request):
     list_ = List.objects.create()
