@@ -3,7 +3,7 @@ from django.test import TestCase
 from lists.models import List,Item
 # class NewListTest(TestCase):
 #     def test_validation_errors_are_sent_back_to_home_page_template(self):
-#         response = self.client.post('/lists/new', data={'item_text': ''})
+#         response = self.client.post('/lists/new', data={'text': ''})
 #         self.assertEqual(response.status_code, 200)
 #         self.assertTemplateUsed(response, 'lists/home.html')
 #         excepted_error = escape("You can't have an empty list item")
@@ -18,7 +18,7 @@ from lists.models import List,Item
 #
 #         self.client.post(
 #             f'/lists/{correct_list.id}/',
-#             data={'item_text': 'A new item for an existing list'}
+#             data={'text': 'A new item for an existing list'}
 #         )
 #         self.assertEqual(Item.objects.count(), 1)
 #         new_item = Item.objects.first()
@@ -31,7 +31,7 @@ from lists.models import List,Item
 #
 #         response = self.client.post(
 #             f'/lists/{correct_list.id}/',
-#             data={'item_text': 'A new item for an existing list'}
+#             data={'text': 'A new item for an existing list'}
 #         )
 #         self.assertRedirects(response, f'/lists/{correct_list.id}/')
 #
@@ -39,7 +39,7 @@ from lists.models import List,Item
 #         list_ = List.objects.create()
 #         response = self.client.post(
 #             f'/lists/{list_.id}/',
-#             data={'item_text': ''}
+#             data={'text': ''}
 #         )
 #         self.assertEqual(response.status_code, 200)
 #         self.assertTemplateUsed(response, 'lists/list.html')
