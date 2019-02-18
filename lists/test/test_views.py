@@ -46,8 +46,8 @@ from lists.models import List,Item
 #         expected_error = escape("You can't have an empty list item")
 #         self.assertContains(response, expected_error)
 
-from lists.forms import ItemForm
-class HomePageTest(TestCase):
-    def test_home_page_uses_item_form(self):
-        response = self.client.get('/')
-        self.assertIsInstance(response.context['form'], ItemForm)
+# from lists.forms import ItemForm
+# class HomePageTest(TestCase):
+#     def test_home_page_uses_item_form(self):
+#         response = self.client.get('/')
+#         self.assertIsInstance(response.context['form'], ItemForm)

@@ -2,13 +2,22 @@ from django.core.exceptions import ValidationError
 from django.test import TestCase
 from lists.models import List, Item
 # class ListAndItemModelsTest(TestCase):
-#     def test_cannot_save_empty_list_imtes(self):
-#         list_ = List.objects.create()
-#         item = Item(list=list_, text='')
-#         with self.assertRaises(ValidationError):
-#             item.save()
-#             item.full_clean()
-#
-#     def test_get_absolute_url(self):
-#         list_ = List.objects.create()
-#         self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
+# #     def test_cannot_save_empty_list_imtes(self):
+# #         list_ = List.objects.create()
+# #         item = Item(list=list_, text='')
+# #         with self.assertRaises(ValidationError):
+# #             item.save()
+# #             item.full_clean()
+# #
+# #     def test_get_absolute_url(self):
+# #         list_ = List.objects.create()
+# #         self.assertEqual(list_.get_absolute_url(), f'/lists/{list_.id}/')
+#     def test_list_ordering(self):
+#         list1 = List.objects.create()
+#         item1 = Item.objects.create(list=list1,text='i1')
+#         item2 = Item.objects.create(list=list1, text='item 2')
+#         item3 = Item.objects.create(list=list1,text='3')
+#         self.assertEqual(
+#             list(Item.objects.all()),
+#             [item1,item2,item3]
+#         )

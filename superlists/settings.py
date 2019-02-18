@@ -78,19 +78,19 @@ WSGI_APPLICATION = 'superlists.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.sqlite3',
-    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    # }
     'default': {
-        'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
-        'NAME': 'book',  # 你要存储数据的库名，事先要创建之
-        'USER': 'book',  # 数据库用户名
-        'PASSWORD': 'book',  # 密码
-        'HOST': '127.0.0.1',  # 主机
-        'PORT': '13306',  # 数据库使用的端口
-	'OPTIONS':{'isolation_level':None}
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql',  # 数据库引擎
+    #     'NAME': 'book',  # 你要存储数据的库名，事先要创建之
+    #     'USER': 'book',  # 数据库用户名
+    #     'PASSWORD': 'book',  # 密码
+    #     'HOST': '127.0.0.1',  # 主机
+    #     'PORT': '13306',  # 数据库使用的端口
+    # 'OPTIONS':{'isolation_level':None}
+    # }
 }
 
 
